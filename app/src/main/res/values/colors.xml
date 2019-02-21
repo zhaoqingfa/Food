@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="colorFFFFFF">#FFFFFF</color>
+    <color name="color0099FF">#0099FF</color>
+    <color name="colorABADBB">#ABADBB</color>
+    <color name="color333333">#333333</color>
+    <color name="colorFF4081">#FF4081</color>
+    <color name="color018346">#018346</color>
+    <color name="color062ada">#062ada</color>
+
+    <color name="color_gray">@color/colorABADBB</color>
+    <color name="color_pink">@color/colorFF4081</color>
+    <color name="color_green">@color/color018346</color>
+    <color name="color_blue">@color/color062ada</color>
+    <color name="color_common_white">@color/colorFFFFFF</color>
+</resources>

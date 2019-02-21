@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Food</string>
+
+    <string name="order_food">点餐</string>
+    <string name="add_food">加餐</string>
+    <string name="payment">付款</string>
+</resources>
