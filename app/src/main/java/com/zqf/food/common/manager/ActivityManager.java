@@ -1,7 +1,9 @@
 package com.zqf.food.common.manager;
 
 import android.app.Activity;
+import android.app.Application;
 import android.content.Context;
+import android.os.Bundle;
 import android.util.Log;
 
 import java.util.Stack;
@@ -12,6 +14,8 @@ import java.util.Stack;
 
 public class ActivityManager {
     private Stack<Activity> activityStack;
+    private int mActivityCount;
+    private boolean mIsForeground;
 
     private ActivityManager() {
     }
@@ -111,4 +115,55 @@ public class ActivityManager {
             e.printStackTrace();
         }
     }
+
+    public void registerActivityLifecycleCallbacks(Application application) {
+        application.registerActivityLifecycleCallbacks(lifecycleCallbacks);
+    }
+
+    public boolean isForeground() {
+        return mIsForeground;
+    }
+
+    private Application.ActivityLifecycleCallbacks lifecycleCallbacks = new Application.ActivityLifecycleCallbacks() {
+        @Override
+        public void onActivityCreated(Activity activity, Bundle savedInstanceState) {
+
+        }
+
+        @Override
+        public void onActivityStarted(Activity activity) {
+            if (mActivityCount == 0) {
+                mIsForeground = true;
+            }
+            mActivityCount++;
+        }
+
+        @Override
+        public void onActivityResumed(Activity activity) {
+
+        }
+
+        @Override
+        public void onActivityPaused(Activity activity) {
+
+        }
+
+        @Override
+        public void onActivityStopped(Activity activity) {
+            mActivityCount--;
+            if (mActivityCount == 0) {
+                mIsForeground = false;
+            }
+        }
+
+        @Override
+        public void onActivitySaveInstanceState(Activity activity, Bundle outState) {
+
+        }
+
+        @Override
+        public void onActivityDestroyed(Activity activity) {
+
+        }
+    };
 }

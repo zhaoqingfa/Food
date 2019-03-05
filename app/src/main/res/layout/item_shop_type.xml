@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+    <RelativeLayout
+        android:id="@+id/mrl_item"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_item_height_medium"
+        android:paddingLeft="@dimen/common_margin_small"
+        android:orientation="horizontal"
+        android:background="@color/color_common_background"
+        >
+        <ImageView
+            android:id="@+id/miv_icon"
+            android:layout_width="@dimen/common_margin"
+            android:layout_height="@dimen/common_margin"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/ic_launcher"
+            />
+        <TextView
+            android:id="@+id/mtv_shop_type_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/miv_icon"
+            android:layout_marginLeft="@dimen/dimen_5dp"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textSize="@dimen/common_text_size_small"
+            android:textColor="@color/color_common_text2"
+            />
+
+        <TextView
+            android:id="@+id/mtv_num"
+            android:layout_width="@dimen/common_margin"
+            android:layout_height="@dimen/common_margin"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:text="0"
+            android:textSize="@dimen/common_text_size_small_x"
+            android:textColor="@color/color_common_white"
+            android:background="@drawable/shape_circle_red"
+            />
+    </RelativeLayout>
+
+</LinearLayout>

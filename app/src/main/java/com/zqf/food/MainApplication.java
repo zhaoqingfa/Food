@@ -4,6 +4,7 @@ import android.app.Application;
 import android.content.Context;
 
 import com.zqf.food.common.log.LogUtil;
+import com.zqf.food.common.manager.ActivityManager;
 import com.zqf.food.util.SystemUtil;
 
 
@@ -24,6 +25,7 @@ public class MainApplication extends Application {
         mInstance = this;
         isDebug = SystemUtil.isApkInDebug(context);
         LogUtil.init(isDebug);
+        ActivityManager.getInstance().registerActivityLifecycleCallbacks(mInstance);
     }
 
     public static MainApplication getInstance() {
@@ -37,4 +39,6 @@ public class MainApplication extends Application {
     public boolean isDebug() {
         return isDebug;
     }
+
+
 }

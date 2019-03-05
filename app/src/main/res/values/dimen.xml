@@ -2,7 +2,23 @@
 <resources>
     <!-- common -->
     <dimen name="common_margin">16dp</dimen>
+    <dimen name="common_margin_small">10dp</dimen>
+    <dimen name="common_margin_small_x">5dp</dimen>
+    <dimen name="common_margin_small_xxx">-5dp</dimen>
     <dimen name="common_text_size_large_xxx">30sp</dimen>
+    <dimen name="common_text_size_large_xx">20sp</dimen>
+    <dimen name="common_text_size_large_x">18sp</dimen>
+    <dimen name="common_text_size_large">16sp</dimen>
+    <dimen name="common_text_size_medium">14sp</dimen>
+    <dimen name="common_text_size_small">12sp</dimen>
+    <dimen name="common_text_size_small_x">10sp</dimen>
+    <dimen name="common_text_size_small_xx">8sp</dimen>
+    <dimen name="common_text_size_small_xxx">6sp</dimen>
+    <dimen name="common_item_height_large_xxx">100dp</dimen>
+    <dimen name="common_item_height_large">60dp</dimen>
+    <dimen name="common_item_height_medium">50dp</dimen>
+    <dimen name="common_item_height_small">40dp</dimen>
+    <dimen name="common_item_height_small_x">30dp</dimen>
 
 
     <!-- main -->
@@ -11,6 +27,23 @@
     <dimen name="main_circle_radius">50dp</dimen>
     <dimen name="main_circle_margin">15dp</dimen>
 
+
+    <!-- set -->
+    <dimen name="set_input_height">45dp</dimen>
+
+    <!-- shopping -->
+    <dimen name="view_shopping_item_height">50dp</dimen>
+
+    <!-- shop -->
+    <dimen name="shop_bottom_right_width">100dp</dimen>
+    <dimen name="shop_max_height">400dp</dimen>
+    <dimen name="shop_bottom_max_height">60dp</dimen>
+    <dimen name="shop_bottom_height">50dp</dimen>
+    <dimen name="shop_item_height">100dp</dimen>
+
+    <!-- toast -->
+    <dimen name="toast_margin_left_right">32dp</dimen>
+    <dimen name="toast_margin_top_bottom">20dp</dimen>
 
 
     <dimen name="main_bottom_tab_height">50dp</dimen>

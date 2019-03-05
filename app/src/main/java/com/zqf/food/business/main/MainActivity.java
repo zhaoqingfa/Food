@@ -1,5 +1,6 @@
 package com.zqf.food.business.main;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -7,6 +8,8 @@ import android.widget.TextView;
 
 import com.zqf.food.R;
 import com.zqf.food.base.BaseActivity;
+import com.zqf.food.business.set.SettingActivity;
+import com.zqf.food.business.shop.ShopActivity;
 import com.zqf.food.common.log.LogUtil;
 
 public class MainActivity extends BaseActivity<MainPresenter>
@@ -52,6 +55,8 @@ public class MainActivity extends BaseActivity<MainPresenter>
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.mtv_order_food:
+                Intent intent = new Intent(MainActivity.this, ShopActivity.class);
+                startActivity(intent);
                 break;
             case R.id.mtv_add_food:
                 break;

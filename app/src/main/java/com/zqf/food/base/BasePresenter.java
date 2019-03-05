@@ -1,6 +1,7 @@
 package com.zqf.food.base;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.support.v4.util.Preconditions;
 
 import com.zqf.food.base.interfaced.IModel;
@@ -15,16 +16,19 @@ import io.reactivex.disposables.Disposable;
  */
 
 public abstract class BasePresenter<V extends IView, M extends IModel> implements IPresenter {
-    protected V view;
-    protected M model;
+    protected V mView;
+    protected M mModel;
+    protected Context mContext;
+
     // 将所有正在处理的Subscription都添加到CompositeSubscription中
     protected CompositeDisposable mCompositeDisposable;
 
     @SuppressLint("RestrictedApi")
     public BasePresenter(V view) {
         Preconditions.checkNotNull(view, IView.class.getName() + "%s cannot be null");
-        this.view = view;
-        this.model = getModel();
+        this.mView = view;
+        this.mModel = getModel();
+        this.mContext = (Context) view;
         init();
     }
 
@@ -38,10 +42,10 @@ public abstract class BasePresenter<V extends IView, M extends IModel> implement
     @Override
     public void destroy() {
         unDisposable();
-        view = null;
-        if (model != null) {
-            model.destroy();
-            model = null;
+        mView = null;
+        if (mModel != null) {
+            mModel.destroy();
+            mModel = null;
         }
         mCompositeDisposable = null;
     }

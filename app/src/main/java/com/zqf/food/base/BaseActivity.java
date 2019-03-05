@@ -17,17 +17,17 @@ import com.zqf.food.util.StatusBarUtil;
  */
 
 public abstract class BaseActivity<P extends IPresenter> extends AppCompatActivity implements IView {
-    protected P presenter;
-    public Context context;
+    protected P mPresenter;
+    public Context mContext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         // 将当前activity添加进入管理栈
         ActivityManager.getInstance().addActivity(this);
-        context = this;
+        mContext = this;
         setContentView(getLayoutId());
-        presenter = initPresenter();
+        mPresenter = initPresenter();
         setStatusBar();
         initView();
         initData();
@@ -57,10 +57,10 @@ public abstract class BaseActivity<P extends IPresenter> extends AppCompatActivi
     protected void onDestroy() {
         // 将当前activity移除管理栈
         ActivityManager.getInstance().removeActivity(this);
-        if (presenter != null) {
+        if (mPresenter != null) {
             // 在presenter中解绑释放view
-            presenter.destroy();
-            presenter = null;
+            mPresenter.destroy();
+            mPresenter = null;
         }
         super.onDestroy();
     }

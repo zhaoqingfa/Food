@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/mrl_max_bottom"
+        android:layout_marginBottom="-10dp"
+        android:orientation="horizontal"
+        >
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/mrv_type_list"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/mrv_list"
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="match_parent"
+            android:background="@color/color_common_white"
+            >
+
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mll_shadow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color333333"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        >
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/shop_max_height"
+        android:layout_above="@+id/mrl_max_bottom"
+        android:layout_marginBottom="-10dp"
+        android:gravity="bottom">
+
+        <com.zqf.food.business.shopping.ShoppingView
+            android:id="@+id/msv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_common_white"
+            >
+
+        </com.zqf.food.business.shopping.ShoppingView>
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/mrl_max_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/shop_bottom_max_height"
+        android:layout_alignParentBottom="true"
+        >
+
+        <RelativeLayout
+            android:id="@+id/mrl_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/shop_bottom_height"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorFF414044"
+            >
+            <TextView
+                android:id="@+id/mtv_real_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/shop_bottom_right_width"
+                android:text="@string/no_selected_shop"
+                android:textSize="@dimen/common_text_size_medium"
+                android:textColor="@color/colorFF7C7C7D"
+                />
+            <TextView
+                android:id="@+id/mtv_original_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/mtv_real_price"
+                android:layout_alignBottom="@+id/mtv_real_price"
+                android:text="@string/money_mark"
+                android:textSize="@dimen/common_text_size_small_x"
+                android:textColor="@color/colorFF7C7C7D"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/mtv_go_to_settlement"
+                android:layout_width="@dimen/shop_bottom_right_width"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:text="@string/go_to_settlement"
+                android:textSize="@dimen/common_text_size_medium"
+                android:textColor="@color/colorFF7C7C7D"
+                android:background="@color/colorFF535257"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/miv_shopping_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_launcher"/>
+
+            <TextView
+                android:id="@+id/mtv_shopping_num"
+                android:layout_width="@dimen/common_margin"
+                android:layout_height="@dimen/common_margin"
+                android:layout_toRightOf="@+id/miv_shopping_icon"
+                android:layout_alignTop="@+id/miv_shopping_icon"
+                android:layout_marginTop="@dimen/common_margin_small_x"
+                android:layout_marginLeft="@dimen/common_margin_small_xxx"
+                android:gravity="center"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textSize="@dimen/common_text_size_small_x"
+                android:textColor="@color/color_common_white"
+                android:background="@drawable/shape_circle_red"
+                android:visibility="gone"
+                />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</RelativeLayout>
