@@ -18,7 +18,6 @@ import com.zqf.food.business.shop.bean.ShopItemBean;
 import com.zqf.food.business.shopping.ShoppingView;
 import com.zqf.food.util.ToastUtil;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -126,7 +125,12 @@ public class ShopActivity extends BaseActivity<ShopPresenter>
         return new ShopAdapter.ShopCallBack() {
             @Override
             public void onClickAdd(ShopItemBean shopItemBean, int position) {
-                mPresenter.addSelectMap(shopItemBean);
+                if (mPresenter.isNeedSelect(shopItemBean)) {
+                    // 弹出一个页面
+                    return;
+                }
+                openAddAnnotation();
+                mPresenter.addSelectMap(shopItemBean, -1, -1);
             }
 
             @Override
@@ -237,7 +241,11 @@ public class ShopActivity extends BaseActivity<ShopPresenter>
     }
 
     @Override
-    public void updateSelectData(Map<String, Shop> selectMap) {
+    public void updateSelectData(Map<String, Shopping> selectMap) {
+
+    }
+
+    private void openAddAnnotation() {
 
     }
 

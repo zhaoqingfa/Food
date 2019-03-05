@@ -51,6 +51,7 @@ public class ShopSelectView extends LinearLayout implements View.OnClickListener
         downView = findViewById(R.id.miv_down);
         addView = findViewById(R.id.miv_add);
         numView = findViewById(R.id.mtv_num);
+        setClickable(true);
     }
 
     @Override

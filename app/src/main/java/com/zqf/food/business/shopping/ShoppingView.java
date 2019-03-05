@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import com.zqf.food.R;
+import com.zqf.food.business.shop.Shopping;
 
 import java.util.List;
 
@@ -187,7 +188,7 @@ public class ShoppingView extends LinearLayout {
         };
     }
 
-    public void updateDate(List<ShopBean> shopBeans) {
+    public void updateDate(List<Shopping> shopBeans) {
         if (shopBeans == null && shopBeans.size() <= 0) {
             return;
         }

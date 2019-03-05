@@ -9,8 +9,8 @@
     >
     <ImageView
         android:id="@+id/miv_down"
-        android:layout_width="@dimen/common_margin"
-        android:layout_height="@dimen/common_margin"
+        android:layout_width="@dimen/shop_select_icon_size"
+        android:layout_height="@dimen/shop_select_icon_size"
         android:src="@drawable/selector_icon_down"
         />
     <TextView
@@ -25,8 +25,8 @@
         />
     <ImageView
         android:id="@+id/miv_add"
-        android:layout_width="@dimen/common_margin"
-        android:layout_height="@dimen/common_margin"
+        android:layout_width="@dimen/shop_select_icon_size"
+        android:layout_height="@dimen/shop_select_icon_size"
         android:src="@drawable/selector_icon_add"
         />
 </LinearLayout>

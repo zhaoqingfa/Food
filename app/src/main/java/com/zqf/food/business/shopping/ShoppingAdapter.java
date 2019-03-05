@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.zqf.food.R;
+import com.zqf.food.business.shop.Shopping;
 import com.zqf.food.common.widgets.ShopSelectView;
 
 import java.util.ArrayList;
@@ -22,7 +23,7 @@ import java.util.List;
 
 public class ShoppingAdapter extends RecyclerView.Adapter {
     private Context mContext;
-    private List<ShopBean> shopBeans;
+    private List<Shopping> shopBeans;
     private ShoppingAdapterCallBack callBack;
 
     public ShoppingAdapter(Context context) {
@@ -30,9 +31,9 @@ public class ShoppingAdapter extends RecyclerView.Adapter {
         shopBeans = new ArrayList<>();
     }
 
-    public void updateDate(List<ShopBean> shopBeans) {
+    public void updateDate(List<Shopping> Shopping) {
         if (shopBeans != null) {
-            this.shopBeans = shopBeans;
+            this.shopBeans = Shopping;
             notifyDataSetChanged();
         }
     }
@@ -51,7 +52,7 @@ public class ShoppingAdapter extends RecyclerView.Adapter {
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder viewHolder, final int i) {
         ViewHolder holder = (ViewHolder) viewHolder;
-        ShopBean shopBean = shopBeans.get(i);
+        Shopping shopBean = shopBeans.get(i);
         if (shopBean != null) {
             holder.shopName.setText(TextUtils.isEmpty(shopBean.getShopName()) ? mContext
                     .getResources().getString(R.string.no_shop_name) : shopBean.getShopName());

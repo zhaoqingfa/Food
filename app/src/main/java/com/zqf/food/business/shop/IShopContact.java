@@ -15,7 +15,9 @@ public interface IShopContact {
     interface IV extends IView {
         void updateData(List<ShopDataBean> shopDataBeans);
 
-        void updateSelectData(Map<String, Shop> selectMap);
+        void updateSelectData(Map<String, Shopping> selectMap);
+
+
     }
 
     interface IM extends IModel {
